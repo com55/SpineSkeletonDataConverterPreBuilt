@@ -216,7 +216,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p dist/windows
-          find source-code/build -iname "*.exe" -exec cp {} dist/windows/ \;
+          find source-code/build/Release -maxdepth 1 -iname "*.exe" -exec cp {} dist/windows/ \;
           ls -l dist/windows
 
       - name: Package
